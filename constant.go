@@ -16,20 +16,20 @@ const (
 	//autor
 	Author = "mizk.chen@gmail.com"
 	//version
-	Version = "v0.1.0"
+	Version = "v0.1.1"
 	//SKU
-	SKU = "001"
+	SKU = "1806262316"
 )
 
 //错误代码
 var (
-	ErrorFileName         = errors.New("输入和输出文件名相同")
-	ErrorInvalidData      = errors.New("无效数据")
-	ErrorFileIO           = errors.New("IO错误")
-	ErrorAES              = errors.New("AES错误")
-	ErrorInvalidFile      = errors.New(fmt.Sprintf("不是有效的%s文件", Extension))
-	ErrorFileDuplicated   = errors.New("目标文件已存在且不覆盖.如果要覆盖目标文件，请指定--force")
-	ErrorDataMissing      = errors.New("缺少数据")
-	ErrorFrameMissing     = errors.New("缺少帧数据")
-	ErrorChecksumMismatch = errors.New("数据校验错误")
+	ErrorFileName         = errors.New("the input file name is same with the output")
+	ErrorInvalidData      = errors.New("invalid bytes")
+	ErrorFileIO           = errors.New("io error")
+	ErrorAES              = errors.New("aes error")
+	ErrorInvalidFile      = errors.New(fmt.Sprintf("not a valid %s file", Extension))
+	ErrorFileDuplicated   = errors.New("output file already exists,to overwrite it,specify the flag --force")
+	ErrorDataMissing      = errors.New("no more bytes to read")
+	ErrorFrameMissing     = errors.New("mssing frames")
+	ErrorChecksumMismatch = errors.New("checksum mismatch")
 )

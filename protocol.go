@@ -166,7 +166,6 @@ func Decrypt(input, output, password string, force bool) error {
 	fullName := decryptionName(input, output, fileName)
 	//输入文件和输出文件不能相同
 	//这里忽略文件大小写,对于某些系统可能会存在误判
-	//bug
 	if strings.EqualFold(fullName, input) {
 		return ErrorFileName
 	}
@@ -238,7 +237,6 @@ func Encrypt(input, output, password string, secret, force bool) error {
 	fileName := encryptionName(input, output, secret)
 	//输入文件和输出文件不能相同
 	//这里忽略文件大小写,对于某些系统可能会存在误判
-	//bug
 	if strings.EqualFold(fileName, input) {
 		return ErrorFileName
 	}
